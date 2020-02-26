@@ -29,6 +29,13 @@ class LRUCache:
         else:
             return None
 
+        # if key in self.values:
+        #     node = self.values[key]
+        #     self.storage.move_to_end(node)
+        #     return node.value[1]
+        # else:
+        #     return None
+
 
     """
     Adds the given key-value pair to the cache. The newly-
@@ -53,3 +60,16 @@ class LRUCache:
                 self.storage.remove_from_tail()
             else:
                 self.size += 1
+
+        # if key in self.values:
+        #     node = self.values[key]
+        #     node.value = (key,value)
+        #     self.storage.move_to_end(node)
+        #     return
+        # if self.size == self.limit:
+        #     del self.values[self.storage.head.value[0]]
+        #     self.storage.remove_from_head()
+        #     self.size -= 1
+        # self.storage.add_to_tail((key,value))
+        # self.values[key] = self.storage.tail
+        # self.size += 1
