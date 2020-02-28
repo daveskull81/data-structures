@@ -87,7 +87,7 @@ class BinarySearchTree:
     # in an iterative breadth first traversal
     def bft_print(self, node):
         queue = Queue()
-        queue.enqueue(self)
+        queue.enqueue(node)
 
         while queue.len() > 0:
             temp = queue.dequeue()
@@ -101,7 +101,7 @@ class BinarySearchTree:
     # in an iterative depth first traversal
     def dft_print(self, node):
         stack = Stack()
-        stack.push(self)
+        stack.push(node)
 
         while stack.len() > 0:
             temp = stack.pop()
